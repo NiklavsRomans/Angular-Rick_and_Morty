@@ -13,8 +13,8 @@ export class CharactersComponent implements OnInit {
   filteredCharacters?: CharacterResults[];
   pages?: number[];
   currentPage = 1;
-  filterBy?: any;
-  filterGender?: any;
+  filterByNameValue?: any;
+  filterbyGenderValue?: any;
   charactersSubscription?: Subscription;
 
   constructor(private charactersService: CharactersService) {}
@@ -37,7 +37,7 @@ export class CharactersComponent implements OnInit {
   filterCharactersByName(): void {
     this.filteredCharacters = [
       ...(this.characters || []).filter((character) =>
-        character.name.toLowerCase().includes(this.filterBy)
+        character.name.toLowerCase().includes(this.filterByNameValue)
       ),
     ];
   }
@@ -45,7 +45,7 @@ export class CharactersComponent implements OnInit {
   filterCharactersByGender(): void {
     this.filteredCharacters = [
       ...(this.characters || []).filter(
-        (character) => character.gender === this.filterGender
+        (character) => character.gender === this.filterbyGenderValue
       ),
     ];
   }

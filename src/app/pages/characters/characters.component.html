@@ -19,14 +19,14 @@
           <input
             class="input"
             type="text"
-            [(ngModel)]="filterBy"
+            [(ngModel)]="filterByNameValue"
             (keyup)="filterCharactersByName()"
             placeholder="Search Character by name..."
           />
           <select
             class="select"
             (change)="filterCharactersByGender()"
-            [(ngModel)]="filterGender"
+            [(ngModel)]="filterbyGenderValue"
           >
             <option [ngValue]="undefined" disabled selected>Gender</option>
             <option value="Male">Male</option>
