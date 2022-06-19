@@ -34,14 +34,6 @@ export class CharactersComponent implements OnInit {
       });
   }
 
-  // filterCharactersByGender(): void {
-  //   this.filteredCharacters = [
-  //     ...(this.characters || []).filter(
-  //       (character) => character.gender === this.filterbyGenderValue
-  //     ),
-  //   ];
-  // }
-
   fillInPageArray(total: number): void {
     this.pages = [] as number[];
 
