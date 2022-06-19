@@ -1,0 +1,29 @@
+<div class="single__character-card">
+  <div class="single__character-card--content">
+    <div class="single__character-card--image">
+      <img src="{{ image }}" alt="Not Found" />
+    </div>
+    <div class="single__character-card--info">
+      <h2 class="single__character-card--name">{{ name }}</h2>
+      <div class="single__character-card--description">
+        <p>
+          Status: <strong>{{ status }}</strong>
+        </p>
+        <p>
+          Origin: <strong>{{ origin }}</strong>
+        </p>
+        <p>
+          Species: <strong>{{ species }}</strong>
+        </p>
+        <p>
+          Created: <strong>{{ created }}</strong>
+        </p>
+      </div>
+      <div class="single__character-card--button">
+        <button class="single__button" [routerLink]="'/characters'">
+          Back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
