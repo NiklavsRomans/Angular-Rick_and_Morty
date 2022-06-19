@@ -11,11 +11,11 @@ import { CharactersService } from 'src/app/services/characters.service';
 export class CharactersComponent implements OnInit {
   characters?: CharacterResults[];
   filteredCharacters?: CharacterResults[];
+  charactersSubscription?: Subscription;
   pages?: number[];
   currentPage = 1;
   filterByNameValue?: any;
   filterbyGenderValue?: any;
-  charactersSubscription?: Subscription;
 
   constructor(private charactersService: CharactersService) {}
 
