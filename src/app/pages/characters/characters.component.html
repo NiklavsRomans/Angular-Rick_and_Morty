@@ -20,20 +20,16 @@
             class="input"
             type="text"
             [(ngModel)]="filterByNameValue"
-            (keyup)="filterCharactersByName()"
             placeholder="Search Character by name..."
           />
-          <select
-            class="select"
-            (change)="filterCharactersByGender()"
-            [(ngModel)]="filterbyGenderValue"
-          >
+          <select class="select" [(ngModel)]="filterByGenderValue">
             <option [ngValue]="undefined" disabled selected>Gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="unknown">Unknown</option>
             <option value="Genderless">Genderless</option>
           </select>
+          <button class="search-btn" (click)="getCharacters(1)">Search</button>
         </div>
         <div class="character__card-wrapper">
           <div *ngFor="let character of filteredCharacters">

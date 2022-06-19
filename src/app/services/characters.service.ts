@@ -12,8 +12,14 @@ export class CharactersService {
 
   constructor(private http: HttpClient) {}
 
-  getCharacters(page = 1): Observable<Characters> {
-    return this.http.get<Characters>(`${this.baseUrl}?page=${page}`);
+  getCharacters(
+    page = 1,
+    name: string,
+    gender: string
+  ): Observable<Characters> {
+    return this.http.get<Characters>(
+      `${this.baseUrl}/?page=${page}&name=${name}&gender=${gender}`
+    );
   }
 
   getCharacter(id: string): Observable<Character> {

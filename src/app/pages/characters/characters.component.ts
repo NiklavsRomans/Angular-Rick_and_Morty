@@ -14,8 +14,8 @@ export class CharactersComponent implements OnInit {
   charactersSubscription?: Subscription;
   pages?: number[];
   currentPage = 1;
-  filterByNameValue?: any;
-  filterbyGenderValue?: any;
+  filterByNameValue?: any = '';
+  filterByGenderValue?: any = '';
 
   constructor(private charactersService: CharactersService) {}
 
@@ -25,7 +25,7 @@ export class CharactersComponent implements OnInit {
 
   getCharacters(page = 1): void {
     this.charactersService
-      .getCharacters(page)
+      .getCharacters(page, this.filterByNameValue, this.filterByGenderValue)
       .subscribe((characterResponse) => {
         this.characters = characterResponse.results;
         this.filteredCharacters = [...characterResponse.results];
@@ -34,21 +34,13 @@ export class CharactersComponent implements OnInit {
       });
   }
 
-  filterCharactersByName(): void {
-    this.filteredCharacters = [
-      ...(this.characters || []).filter((character) =>
-        character.name.toLowerCase().includes(this.filterByNameValue)
-      ),
-    ];
-  }
-
-  filterCharactersByGender(): void {
-    this.filteredCharacters = [
-      ...(this.characters || []).filter(
-        (character) => character.gender === this.filterbyGenderValue
-      ),
-    ];
-  }
+  // filterCharactersByGender(): void {
+  //   this.filteredCharacters = [
+  //     ...(this.characters || []).filter(
+  //       (character) => character.gender === this.filterbyGenderValue
+  //     ),
+  //   ];
+  // }
 
   fillInPageArray(total: number): void {
     this.pages = [] as number[];
