@@ -1,0 +1,12 @@
+<div class="single__character-wrapper">
+  <div *ngIf="character">
+    <app-single-character-card
+      [image]="character.image"
+      [name]="character.name"
+      [species]="character.species"
+      [origin]="character.origin.name"
+      [status]="character.status"
+      [created]="character.created"
+    ></app-single-character-card>
+  </div>
+</div>
