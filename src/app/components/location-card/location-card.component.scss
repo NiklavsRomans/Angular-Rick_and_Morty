@@ -1,0 +1,33 @@
+.location__card {
+    border-radius: 6px;
+    max-width: 400px;
+    min-height: 200px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    background-color: rgb(10, 10, 10);
+    box-shadow: 0 0 30px #1b1b1bb7;
+    color: white;
+}
+
+.location__card-info {
+    padding: 20px 10px;
+}
+
+.location__name {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.character__dimension {
+    padding: 10px 0px;
+}
+
+.location__name {
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 0, 128);
+    border-top: 1px solid rgb(255, 0, 128);
+    margin: 10px 50px;
+    padding: 10px;
+    font-size: 20px;
+}
