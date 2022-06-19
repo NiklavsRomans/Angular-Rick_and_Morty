@@ -1,0 +1,53 @@
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="pagination">
+          <ul class="pagination__list">
+            <li class="list__item" *ngFor="let page of showPages()">
+              <button
+                class="list__item-button"
+                (click)="getCharacters(page)"
+                [ngClass]="{ active: page === currentPage }"
+              >
+                {{ page }}
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="character__input-filter">
+          <input
+            class="input"
+            type="text"
+            [(ngModel)]="filterBy"
+            (keyup)="filterCharactersByName()"
+            placeholder="Search Character by name..."
+          />
+          <select
+            class="select"
+            (change)="filterCharactersByGender()"
+            [(ngModel)]="filterGender"
+          >
+            <option [ngValue]="undefined" disabled selected>Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="unknown">Unknown</option>
+          </select>
+        </div>
+        <div class="character__card-wrapper">
+          <div *ngFor="let character of filteredCharacters">
+            <app-character-card
+              [name]="character.name"
+              [gender]="character.gender"
+              [imgSrc]="character.image"
+              [count]="character.episode.length"
+              [location]="character.location.name"
+              [origin]="character.origin.name"
+              [routerLink]="['/character', character.id]"
+            ></app-character-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
