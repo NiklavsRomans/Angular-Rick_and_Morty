@@ -1,0 +1,39 @@
+.character__card {
+    max-width: 300px;
+    min-height: 500px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.233);
+    color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.character__card-info {
+    padding: 40px 10px;
+    font-size: 16px;
+}
+
+.character__name {
+    color: rgb(255, 255, 255);
+    margin: 0px 50px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid rgb(255, 64, 89);
+    border-radius: 8px;
+}
+
+.character__gender {
+    padding: 10px 0px;
+}
+
+.character__origin {
+    padding: 10px 0px;
+}
+
+
+.character____card-info--wrapper {
+    margin-top: 30px;
+}
