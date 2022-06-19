@@ -1,0 +1,21 @@
+.location__card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+
+.location__input-search {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.input {
+    max-width: 300px;
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(252, 249, 249, 0.692);
+    border: 1px solid black;
+}

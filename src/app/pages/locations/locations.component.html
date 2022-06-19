@@ -1,0 +1,33 @@
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="location__input-search">
+          <input
+            class="input"
+            type="text"
+            [(ngModel)]="filterByName"
+            (keyup)="filterLocationsByName()"
+            placeholder="Filter by Name..."
+          />
+          <input
+            class="input"
+            type="text"
+            [(ngModel)]="filterByDimension"
+            (keyup)="filterLocationsByDimension()"
+            placeholder="Filter By Dimension..."
+          />
+        </div>
+        <div class="location__card-wrapper">
+          <div *ngFor="let location of filteredLocations">
+            <app-location-card
+              [name]="location.name"
+              [dimension]="location.dimension"
+              [residents]="location.residents.length"
+            ></app-location-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
