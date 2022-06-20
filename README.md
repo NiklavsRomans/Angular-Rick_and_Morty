@@ -1,4 +1,12 @@
-# RickAndMorty
+# Rick_an_Morty
+
+<p align="center">
+  <img src="src\assets\images\work1.png" width="650" title="Home Page">
+</p>
+
+<p align="center">
+  <img src="src\assets\images\work2.png" width="650" title="Home Page">
+</p>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
 
