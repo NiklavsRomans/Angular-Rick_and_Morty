@@ -10,7 +10,6 @@ import { CharactersService } from 'src/app/services/characters.service';
 })
 export class CharactersComponent implements OnInit {
   characters?: CharacterResults[];
-  filteredCharacters?: CharacterResults[];
   charactersSubscription?: Subscription;
   pages?: number[];
   currentPage = 1;
@@ -28,7 +27,6 @@ export class CharactersComponent implements OnInit {
       .getCharacters(page, this.filterByNameValue, this.filterByGenderValue)
       .subscribe((characterResponse) => {
         this.characters = characterResponse.results;
-        this.filteredCharacters = [...characterResponse.results];
         this.fillInPageArray(characterResponse.info.pages);
         this.currentPage = page;
       });
