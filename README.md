@@ -1,4 +1,4 @@
-# Rick_an_Morty
+# Rick_and_Morty
 
 <p align="center">
   <img src="src\assets\images\work1.png" width="650" title="Home Page">
